@@ -6,28 +6,38 @@ Este projeto foi desenvolvido como parte das disciplinas ECOS02 (Sistemas Distri
 
 O projeto está organizado da seguinte maneira:
 
-sistema-de-atendimento/
-│
-├── backend/
-│ ├── auth.js
-│ ├── package-lock.json
-│ ├── package.json
-│ ├── server.js
-│ └── service-account-key.json
-│
-└── frontend/
-├── node_modules/
-├── public/
-│ ├── cliente.html
-│ ├── dashboard.html
-│ ├── details.html
-│ ├── login.html
-│ ├── style.css
-│ ├── cliente.js
-│ ├── dashboard.js
-│ ├── details.js
-│ └── login.js
-└── package.json
+## Descrição dos Componentes
+
+### `backend/`
+
+Esta pasta contém o código do servidor Node.js que gerencia a lógica de negócios, autenticação, e integrações com serviços externos como Google Cloud Pub/Sub para mensagens e Nodemailer para envio de emails.
+
+- **`auth.js`**: Módulo de autenticação para gerenciar usuários e autenticação.
+- **`package-lock.json`**: Arquivo gerado pelo npm para garantir a consistência das versões das dependências.
+- **`package.json`**: Arquivo de configuração do npm que lista as dependências e scripts de execução do servidor.
+- **`server.js`**: Arquivo principal do servidor Node.js que configura endpoints RESTful para gerenciar chamados, usuários e autenticação.
+- **`service-account-key.json`**: Arquivo de chave de serviço do Google Cloud Platform para autenticação.
+
+### `frontend/`
+
+Esta pasta contém o código do frontend da aplicação, que inclui a interface do usuário (HTML, CSS, JavaScript) e as dependências necessárias.
+
+- **`node_modules/`**: Pasta que contém todas as dependências instaladas pelo npm para o frontend.
+- **`public/`**: Pasta raiz do frontend que contém os arquivos estáticos servidos pelo servidor.
+  - **`cliente.html`**: Página de abertura de chamados para os clientes.
+  - **`dashboard.html`**: Página de dashboard para visualização dos chamados.
+  - **`details.html`**: Página de detalhes de um chamado específico.
+  - **`login.html`**: Página de login para autenticação de usuários.
+  - **`style.css`**: Arquivo de folha de estilos para estilização das páginas.
+  - **`cliente.js`**: Script JavaScript para interação com a página de abertura de chamados.
+  - **`dashboard.js`**: Script JavaScript para interação com a página de dashboard.
+  - **`details.js`**: Script JavaScript para interação com a página de detalhes de chamados.
+  - **`login.js`**: Script JavaScript para interação com a página de login e autenticação.
+
+### Considerações
+
+Esta estrutura permite uma separação clara entre a lógica do servidor (backend) e a interface do usuário (frontend), facilitando o desenvolvimento, manutenção e escalabilidade do sistema de atendimento distribuído.
+
 
 
 ## Funcionalidades Principais
