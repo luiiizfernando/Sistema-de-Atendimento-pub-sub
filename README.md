@@ -66,6 +66,7 @@ Esta estrutura permite uma separação clara entre a lógica do servidor (backen
 
 2. **Frontend:**
 
+   ```bash
    cd frontend/
    npm install
    npm start
