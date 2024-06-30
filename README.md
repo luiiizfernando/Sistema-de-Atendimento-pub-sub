@@ -62,7 +62,7 @@ Esta estrutura permite uma separação clara entre a lógica do servidor (backen
    ```bash
    cd backend/
    npm install
-   node server.js
+   node server.js ou npm start
 
 2. **Frontend:**
 
